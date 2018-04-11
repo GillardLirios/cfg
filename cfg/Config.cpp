@@ -110,10 +110,10 @@ namespace cfg
     std::string escape(const std::string value)
     {
         // pure aplha numeric values can be simply written
-        if (isalnum(value))
-        {
-            return value;
-        }
+        //if (isalnum(value))
+        //{
+        //    return value;
+        //}
 
         std::stringstream buff;
         buff << '"';
@@ -178,6 +178,7 @@ namespace cfg
             for (auto& value : section.second)
             {
                 out << value.first << " = " << escape(value.second) << std::endl;
+				//out << value.first << " = " << unicode-es(value.second) << std::endl;
             }
         }
     }
